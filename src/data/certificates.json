@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Web Design",
+    "place" : "1st Place",
+    "issuer": "M.E.S. College of Arts and Commerce, Zuarinagar, Goa",
+    "date": "22-02-2025",
+    "imageSrc": "certificates/cert1.png"
+  },
+  {
+    "title": "Technotronics",
+    "place" : "Runners up",
+    "issuer": "Dnyanprasarak Mandal's College and Research Centre Assagao, Bardez, Goa",
+    "date": "24-01-2025",
+    "imageSrc": "certificates/cert2.png"
+  },
+  {
+    "title": "Lenovo Leap - Intro to AI-ML-DL",
+    "place" : "Internship-Completion",
+    "issuer": "Lenovo",
+    "date": "20-07-2025",
+    "imageSrc": "certificates/cert3.png"
+  },
+  {
+    "title": "Basics of AI-ML",
+    "place" : "Course",
+    "issuer": "HP-Life",
+    "date": "06-08-2025",
+    "imageSrc": "certificates/cert4.png"
+  }
+]
