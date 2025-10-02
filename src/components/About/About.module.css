@@ -10,7 +10,6 @@
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .title {
   color: var(--color-text);
   font-size: 35px;
@@ -51,6 +50,12 @@
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
+}
+/* About.module.css */
+.aboutItem img {
+  width: 40px;  /* adjust as needed */
+  height: 40px; /* keep aspect ratio */
+  object-fit: contain;
 }
 
 .aboutItem:hover {

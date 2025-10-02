@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Certificates.module.css";
-import certificates from "../../data/certificates.json";
-import { getImageUrl } from "../../utils";
+import certificates from "../../data/certificates";
 
 export const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -10,7 +9,8 @@ export const Certificates = () => {
     setSelectedImage(imageSrc);
   };
 
-  const closeModal = () => {
+  const closeModal = (e) => {
+    e.stopPropagation(); 
     setSelectedImage(null);
   };
 
@@ -25,7 +25,7 @@ export const Certificates = () => {
               onClick={() => openModal(cert.imageSrc)}
             >
               <img
-                src={getImageUrl(cert.imageSrc)}
+                src={cert.imageSrc}
                 alt={cert.title}
                 className={styles.image}
               />
@@ -43,9 +43,9 @@ export const Certificates = () => {
       {/* Modal for displaying the full-size image */}
       {selectedImage && (
         <div className={styles.modal} onClick={closeModal}>
-          <div className={styles.modalContent}>
+          <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
             <img 
-              src={getImageUrl(selectedImage)} 
+              src={selectedImage} 
               alt="Full size certificate" 
               className={styles.fullSizeImage}
             />

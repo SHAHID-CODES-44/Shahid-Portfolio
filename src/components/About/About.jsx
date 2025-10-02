@@ -1,7 +1,6 @@
 import React from "react";
-
 import styles from "./About.module.css";
-import { getImageUrl } from "../../utils";
+import { aboutImage, cursorIcon, aiIcon, uiIcon } from "../../data/about"; // ✅ import from data/about.js
 
 export const About = () => {
   return (
@@ -9,13 +8,13 @@ export const About = () => {
       <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <img
-          src={getImageUrl("about/aboutImage.png")}
+          src={aboutImage}
           alt="Me sitting with a laptop"
           className={styles.aboutImage}
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
+            <img src={cursorIcon} alt="Cursor icon" />
             <div className={styles.aboutItemText}>
               <h3>Full-Stack Developer</h3>
               <p>
@@ -24,7 +23,7 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="Server icon" />
+            <img src={aiIcon} alt="AI icon"/>
             <div className={styles.aboutItemText}>
               <h3>AI-ML Interest</h3>
               <p>
@@ -33,7 +32,7 @@ export const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
+            <img src={uiIcon} alt="UI icon" />
             <div className={styles.aboutItemText}>
               <h3>UI Designer</h3>
               <p>

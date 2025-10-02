@@ -1,10 +1,7 @@
-// src/components/Hackathons/Hackathons.jsx
-
 import React from "react";
 
 import styles from "./Hackathons.module.css";
-import hackathons from "../../data/hackathons.json";
-import { getImageUrl } from "../../utils";
+import hackathons from "../../data/hackathons"; // updated JS import
 
 export const Hackathons = () => {
   return (
@@ -16,7 +13,7 @@ export const Hackathons = () => {
             return (
               <li key={id} className={styles.historyItem}>
                 <img
-                  src={getImageUrl(hackathon.imageSrc)}
+                  src={hackathon.image} // updated to direct import
                   alt={`${hackathon.organisation} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
