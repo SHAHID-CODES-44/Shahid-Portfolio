@@ -1,37 +1,44 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 10%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  align-items: center;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background: rgba(25, 55, 109, 0.40);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.40);
+  padding: 15px 10%;
 }
 
 .title {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   text-decoration: none;
   color: var(--color-text);
-  transition: 0.5s;
-}
-.title:hover{
-  color: rgb(137, 137, 16);
-}
-
-.menuBtn {
-  display: none;
 }
 
 .menu {
   display: flex;
 }
 
+.menuBtn {
+  display: none;
+}
+
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 30px;
   list-style: none;
 }
 
@@ -39,15 +46,23 @@
   font-size: 20px;
   color: var(--color-text);
   text-decoration: none;
-  transition: 0.5s;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.menuItems a:hover{
-  color: yellow;
+
+.menuItems a:hover {
+  color: var(--color-primary);
 }
+
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px 5%;
+  }
+
+  .navbar.scrolled {
+    padding: 15px 5%;
   }
 
   .menu {
@@ -63,6 +78,8 @@
   .menuBtn {
     display: block;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
   }
 
   .menuItems {
@@ -79,10 +96,41 @@
     );
     padding: 24px 33px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 40px;
+    right: 0;
+    backdrop-filter: blur(10px);
   }
 
   .menuOpen {
     display: flex;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .navbar.scrolled {
+    padding: 10px 5%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .menu {
+    margin-right: 5%;
+  }
+
+  .menuItems {
+    padding: 20px 25px;
+    top: 35px;
+  }
+
+  .menuItems a {
+    font-size: 16px;
   }
 }

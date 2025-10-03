@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import heroImg from "../../assets/hero/heroImage.png";
+import Resume from "../../assets/pdfs/Shahid-Firozabad_Resume.pdf";
 
 export const Hero = () => {
   return (
@@ -9,12 +10,17 @@ export const Hero = () => {
         <h1 className={styles.title}>Hi, I'm Shahid</h1>
         <div className="hero-desc">
           <p className={styles.description}>
-            I am an IT student passionate about Artificial Intelligence, coding, and multimedia. I’m exploring Python, Java, and creative tech projects, aiming to build a career in AI and contribute to impactful, smart technologies.
+            I am an IT student passionate about Artificial Intelligence, full-stack development, and innovative technologies. I specialize in the MERN stack (MongoDB, Express.js, React, Node.js), and I’m exploring advanced projects that combine AI, web development, and multimedia. I aim to build a career in AI-driven web applications, creating impactful and smart solutions that merge intelligence, interactivity, and cutting-edge technology.
           </p>
         </div>
-        <a href="mailto:myemail@email.com" className={styles.contactBtn}>
-          Contact Me
-        </a>
+        <div className="hero-buttons-container">
+          <a href="mailto:myemail@email.com" className={styles.contactBtn}>
+            Contact Me
+          </a>
+          <a href={Resume} target="_blank" rel="noopener noreferer" className={styles.resumeBtn}>
+            Veiw Resume
+          </a>
+        </div>
       </div>
       <img src={heroImg} alt="Hero image of me" className={styles.heroImg} />
       <div className={styles.topBlur} />
